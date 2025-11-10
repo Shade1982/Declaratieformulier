@@ -102,5 +102,8 @@ const json = {
     }
   ],
   "showTitle": false,
+  "showPageTitles": false,
+  "showCompletePage": false,
+  "navigateToUrl": "https://svspirit.nl/",
   "headerView": "advanced"
 }
