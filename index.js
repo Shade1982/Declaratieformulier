@@ -1,5 +1,4 @@
 const survey = new Survey.Model(json);
-survey.applyTheme(SurveyTheme.ThreeDimensionalDarkPanelless);
 survey.onComplete.add((sender, options) => {
     console.log(JSON.stringify(sender.data, null, 3));
 });
