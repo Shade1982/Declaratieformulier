@@ -34,6 +34,7 @@ const json = {
             {
               "type": "dropdown",
               "name": "Kostenplaats",
+              "isRequired": true,
               "choices": [
                 "Spirit Algemeen",
                 "Actief 55+",
@@ -51,6 +52,7 @@ const json = {
               "type": "dropdown",
               "name": "Tegenrekening",
               "startWithNewLine": false,
+              "isRequired": true,
               "choices": [
                 "4000 Zaalhuur",
                 "4100 Vergoedingen trainers/begeleiders",
@@ -63,12 +65,14 @@ const json = {
                 "4600 Sfeeractiviteiten",
                 "4720 Promotie activiteiten",
                 "4800 Administratiekosten"
-              ]
+              ],
+              "allowClear": false
             },
             {
               "type": "text",
               "name": "Bedrag",
               "startWithNewLine": false,
+              "isRequired": true,
               "maskType": "currency",
               "maskSettings": {
                 "prefix": "€"
@@ -76,12 +80,23 @@ const json = {
             },
             {
               "type": "text",
-              "name": "Omschrijving"
+              "name": "Omschrijving",
+              "isRequired": true
             }
           ],
           "panelCount": 1,
           "minPanelCount": 1,
           "maxPanelCount": 10
+        },
+        {
+          "type": "expression",
+          "name": "Totaal",
+          "expression": "{Declaraties[0].Bedrag} + {Declaraties[1].Bedrag} + {Declaraties[2].Bedrag} + {Declaraties[3].Bedrag} + {Declaraties[4].Bedrag} + {Declaraties[5].Bedrag} + {Declaraties[6].Bedrag} + {Declaraties[7].Bedrag} + {Declaraties[8].Bedrag} + {Declaraties[9].Bedrag}",
+          "format": {
+            "nl": "{0}"
+          },
+          "displayStyle": "currency",
+          "currency": "EUR"
         },
         {
           "type": "file",
@@ -91,19 +106,18 @@ const json = {
           "acceptedTypes": ".xlsx, .docx, .pdf, image/*",
           "waitForUpload": true,
           "maxSize": 10485760,
-          "maxFiles": 5
-        },
-        {
-          "type": "html",
-          "name": "info",
-          "html": "<div id='g-recaptcha'></div> <div class='form-group g-recaptcha' data-callback='verifyCaptcha' data-sitekey='\" + recaptchaClientKey + \"'></div>"
+          "maxFiles": 5,
+          "sourceType": "file-camera"
         }
       ]
     }
   ],
+  "showPrevButton": false,
   "showTitle": false,
   "showPageTitles": false,
   "showCompletePage": false,
   "navigateToUrl": "https://svspirit.nl/",
+  "allowResizeComment": false,
+  "questionsOnPageMode": "singlePage",
   "headerView": "advanced"
 }
