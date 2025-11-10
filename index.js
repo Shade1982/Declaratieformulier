@@ -2,13 +2,37 @@
 
 const surveyJson = {
     elements: [{
-        name: "FirstName",
-        title: "Enter your first name:",
+        name: "Name",
+        title: "Naam:",
         type: "text"
     }, {
-        name: "LastName",
-        title: "Enter your last name:",
+        name: "Date",
+        title: "Datum:",
+        type: "date"
+    }, {
+        name: "Description",
+        title: "Omschrijving:",
         type: "text"
+    }, {
+        name: "Date",
+        title: "Datum:",
+        type: "date"
+    }, {
+        name: "Date",
+        title: "Datum:",
+        type: "date"
+    }, {
+        name: "Date",
+        title: "Datum:",
+        type: "date"
+    }, {
+        name: "Date",
+        title: "Datum:",
+        type: "date"
+    }, {
+        name: "Date",
+        title: "Datum:",
+        type: "date"
     }]
 };
 
