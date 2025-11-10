@@ -90,7 +90,7 @@ const json = {
           "allowImagesPreview": false,
           "acceptedTypes": ".xlsx, .docx, .pdf, image/*",
           "waitForUpload": true,
-          "maxSize": 10.48576,
+          "maxSize": 10485760,
           "maxFiles": 5
         },
         {
