@@ -75,7 +75,7 @@ const json = {
               "isRequired": true,
               "maskType": "currency",
               "maskSettings": {
-                "prefix": "€ "
+                "prefix": "$ "
               }
             },
             {
