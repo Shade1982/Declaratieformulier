@@ -12,8 +12,6 @@ const ACCESSTOKEN = "rnhjlQPSbFbUf-fxRDDJcONSbbXFKEhZ7kSzAPYraWy4sUsNM5";
 const SOURCE = "WordPress";
 // --------------------------------------------
 
-const PORT = 3000;
-
 // Utility: send JSON with CORS header
 function sendJSON(res, data, status = 200) {
   const json = JSON.stringify(data);
@@ -103,5 +101,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at https://ambitious-stone-009b0e703.3.azurestaticapps.net/`);
 });
